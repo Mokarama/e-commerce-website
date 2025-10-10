@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
+
 
 const LeftSlider = () => {
   const links = [
@@ -14,7 +15,7 @@ const LeftSlider = () => {
   ];
 
   return (
-    <div className="w-full md:w-1/4 bg-white shadow-md p-4">
+    <div className=" p-4">
       <ul className="space-y-2">
         {links.map((item, index) => (
           <li key={index}>
@@ -27,6 +28,8 @@ const LeftSlider = () => {
           </li>
         ))}
       </ul>
+
+     
     </div>
   );
 };

@@ -1,6 +1,5 @@
-
-import AwesomeSlider from "react-awesome-slider";
-import "react-awesome-slider/dist/styles.css";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from "react-router-dom";
 
 const RightSlider = () => {
@@ -9,36 +8,43 @@ const RightSlider = () => {
       id: 1,
       title: "iPhone 14 Series",
       subtitle: "Up to 10% off Voucher",
-      image: "/images/iphone14.png",
+      image: "../../../public/bannerImg/banner1.jpg",
       link: "/electronics",
     },
     {
       id: 2,
       title: "Men's Fashion Sale",
       subtitle: "Get 20% off New Arrivals",
-      image: "/images/mensfashion.png",
+      image: "../../../public/bannerImg/banner1.jpg",
       link: "/men's-fashion",
     },
     {
       id: 3,
       title: "Home Essentials",
       subtitle: "Up to 15% off",
-      image: "/images/home.png",
+      image: "../../../public/bannerImg/banner1.jpg",
       link: "/home-&-lifestyle",
     },
   ];
 
   return (
-    <div className="w-full md:w-3/4 p-4">
-      <AwesomeSlider
-        bullets={true}
-        organicArrows={true}
+    <div className="p-4">
+      <Carousel
+        autoPlay
+        infiniteLoop
+        interval={3000}
+        showThumbs={false}
+        showStatus={false}
+        showArrows={true}
+        showIndicators={true}
+        swipeable
+        emulateTouch
         className="rounded-xl overflow-hidden shadow-lg"
       >
         {banners.map((banner) => (
           <div
             key={banner.id}
-            className="bg-black text-white flex flex-col md:flex-row items-center justify-between h-full px-6 md:px-12 py-10"
+            className="bg-[#272323] text-white flex flex-col md:flex-row items-center justify-between w-full h-[450px] px-6 md:px-12 py-10"
           >
             {/* Text Section */}
             <div className="md:w-1/2 space-y-3 text-center md:text-left">
@@ -62,7 +68,7 @@ const RightSlider = () => {
             </div>
           </div>
         ))}
-      </AwesomeSlider>
+      </Carousel>
     </div>
   );
 };
