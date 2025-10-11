@@ -10,7 +10,7 @@ const productsData = [
     oldPrice: 160,
     discount: 40,
     rating: 4.5,
-    img: "https://via.placeholder.com/150x150?text=Gamepad",
+    img: "../../../../public/womansImg/img1.jpg",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const productsData = [
     oldPrice: 1160,
     discount: 35,
     rating: 4.3,
-    img: "https://via.placeholder.com/150x150?text=Keyboard",
+    img: "../../../../public/womansImg/img2.jpg",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const productsData = [
     oldPrice: 400,
     discount: 30,
     rating: 4.7,
-    img: "https://via.placeholder.com/150x150?text=Monitor",
+    img: "../../../../public/womansImg/img3.jpg",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const productsData = [
     oldPrice: 400,
     discount: 25,
     rating: 4.2,
-    img: "https://via.placeholder.com/150x150?text=Chair",
+    img: "../../../../public/womansImg/img4.jpg",
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ const productsData = [
     oldPrice: 350,
     discount: 20,
     rating: 4.6,
-    img: "https://via.placeholder.com/150x150?text=Mouse",
+    img: "../../../../public/womansImg/img5.jpg",
   },
   {
     id: 6,
@@ -55,7 +55,7 @@ const productsData = [
     oldPrice: 550,
     discount: 15,
     rating: 4.8,
-    img: "https://via.placeholder.com/150x150?text=Headset",
+    img: "../../../../public/womansImg/img6.jpg",
   },
   {
     id: 7,
@@ -64,7 +64,7 @@ const productsData = [
     oldPrice: 800,
     discount: 18,
     rating: 4.4,
-    img: "https://via.placeholder.com/150x150?text=Gaming+Chair",
+    img: "../../../../public/womansImg/img7.jpg",
   },
   {
     id: 8,
@@ -73,7 +73,7 @@ const productsData = [
     oldPrice: 1300,
     discount: 20,
     rating: 4.9,
-    img: "https://via.placeholder.com/150x150?text=Mechanical+Keyboard",
+    img: "../../../../public/womansImg/img8.jpg",
   },
   {
     id: 9,
@@ -82,7 +82,7 @@ const productsData = [
     oldPrice: 280,
     discount: 22,
     rating: 4.3,
-    img: "https://via.placeholder.com/150x150?text=Mouse+Pad",
+    img: "../../../../public/womansImg/img9.jpg",
   },
   {
     id: 10,
@@ -91,7 +91,7 @@ const productsData = [
     oldPrice: 250,
     discount: 28,
     rating: 4.1,
-    img: "https://via.placeholder.com/150x150?text=Light+Strip",
+    img: "../../../../public/womansImg/img11.jpg",
   },
 ];
 
@@ -109,12 +109,12 @@ const WomansProducts = () => {
                 className="relative bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition"
               >
                 {/* Discount Label */}
-                <span className="absolute top-2 left-2 bg-red-500 text-white text-sm font-semibold px-2 py-1 rounded">
+                <span className="absolute top-4 left-4 bg-red-500 text-white text-sm font-semibold px-2 py-1 rounded">
                   -{product.discount}%
                 </span>
 
                 {/* Icons */}
-                <div className="absolute top-2 right-2 flex flex-col gap-2">
+                <div className="absolute top-4 right-4 flex flex-col gap-2">
                   <button className="bg-white p-1 rounded-full shadow hover:text-red-500">
                     <FaHeart />
                   </button>
@@ -127,7 +127,7 @@ const WomansProducts = () => {
                 <img
                   src={product.img}
                   alt={product.title}
-                  className="w-full h-40 object-contain p-3"
+                  className="w-full h-40 rounded-2xl object-cover p-3"
                 />
 
                 {/* Product Info */}

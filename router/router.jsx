@@ -5,6 +5,8 @@ import RootLayout from "../layout/RootLayout";
 import Home from "../src/Pages/Home/Home/Home";
 import WomansProducts from "../src/Pages/Home/Banner/WomansProducts";
 import MansProducts from "../src/Pages/Home/Banner/MansProducts";
+import ElectronicsProducts from "../src/Pages/Home/Banner/ElectronicsProducts";
+import MedicinesProducts from "../src/Pages/Home/Banner/MedicinesProducts";
 
 
 const router=createBrowserRouter([
@@ -23,6 +25,14 @@ const router=createBrowserRouter([
         {
           path:"/men-s-fashion",
           Component:MansProducts,
+        },
+        {
+          path:"/electronics",
+          Component:ElectronicsProducts,
+        },
+        {
+          path:"/medicine",
+          Component:MedicinesProducts
         }
 
     ]
