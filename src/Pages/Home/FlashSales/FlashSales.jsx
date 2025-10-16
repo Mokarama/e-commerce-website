@@ -1,4 +1,10 @@
-import React, { useState, useRef } from "react";
+import  { useState, useRef } from "react";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+
 import {
   FaHeart,
   FaStar,
@@ -163,7 +169,7 @@ const FlashSales = () => {
       </div>
 
       {/* Products */}
-      <div
+      <div 
         ref={scrollRef}
         className={`${
           showAll
@@ -172,7 +178,9 @@ const FlashSales = () => {
         }`}
       >
         {visibleProducts.map((item) => (
-          <div
+          <div data-aos="zoom-in"
+            data-aos-duration="3000"
+            data-aos-once="false"
             key={item.id}
             className="relative min-w-[160px] sm:min-w-[200px] md:min-w-[220px] lg:min-w-[250px] bg-base-100 shadow-md hover:shadow-xl rounded-2xl border border-gray-100 group flex-shrink-0 snap-center"
           >
