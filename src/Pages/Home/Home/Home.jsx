@@ -1,4 +1,6 @@
 import Banner from "../Banner/Banner";
+import Categories from "../Categories/Categories";
+import FlashSales from "../FlashSales/FlashSales";
 
 
 
@@ -6,7 +8,9 @@ import Banner from "../Banner/Banner";
 const Home = () => {
     return (
         <div className='w-7xl mx-auto'>
-            <Banner/>    
+            <Banner/>
+            <FlashSales/> 
+            <Categories/>   
         </div>
     );
 };

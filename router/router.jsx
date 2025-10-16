@@ -33,7 +33,9 @@ const router=createBrowserRouter([
         {
           path:"/medicine",
           Component:MedicinesProducts
-        }
+        },
+
+    
 
     ]
     
