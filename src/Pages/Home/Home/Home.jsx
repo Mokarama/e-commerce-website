@@ -5,8 +5,7 @@ import ExploreProducts from "../ExploreProducts/ExploreProducts";
 import FlashSales from "../FlashSales/FlashSales";
 import MusicBanner from "../MusicBanner/MusicBanner";
 import NewArrival from "../NewArrival/NewArrival";
-
-
+import Services from "../Services/Services";
 
 
 const Home = () => {
@@ -19,6 +18,7 @@ const Home = () => {
             <MusicBanner/>
             <ExploreProducts/>
             <NewArrival/>
+            <Services/>
         </div>
     );
 };
