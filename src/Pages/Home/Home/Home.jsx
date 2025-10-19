@@ -1,8 +1,10 @@
 import Banner from "../Banner/Banner";
 import BestProducts from "../BestProducts/BestProducts";
 import Categories from "../Categories/Categories";
+import ExploreProducts from "../ExploreProducts/ExploreProducts";
 import FlashSales from "../FlashSales/FlashSales";
 import MusicBanner from "../MusicBanner/MusicBanner";
+import NewArrival from "../NewArrival/NewArrival";
 
 
 
@@ -15,6 +17,8 @@ const Home = () => {
             <Categories/>  
             <BestProducts/> 
             <MusicBanner/>
+            <ExploreProducts/>
+            <NewArrival/>
         </div>
     );
 };

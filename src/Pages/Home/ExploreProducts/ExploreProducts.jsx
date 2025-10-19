@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaHeart, FaEye, FaStar } from "react-icons/fa";
 
-const womansProductsData = [
+const exploreProductsData = [
   {
     id: 1,
     title: "HAVIT HV-G92 Gamepad",
@@ -96,21 +96,23 @@ const womansProductsData = [
 
 ];
 
-const WomansProducts = () => {
-  const [visible, setVisible] = useState(5);
+const ExploreProducts = () => {
+  const [visible, setVisible] = useState(8);
 
   return (
     <>
-      <Link to="/woman-s-fashion">
+      
         <div className="p-6">
-   
-           {/* Title */}
-      <h2 className="text-3xl font-semibold italic text-center py-5 text-cyan-800">Woman's Fashion</h2>
-      <div className=" border-b-4 border-b-[#c61abd] rounded-3xl w-2/4 mx-auto mb-15 pb-2"></div>
+   {/* Heading */}
+      <div className="flex items-center my-4 ">
+        <div className="w-2 h-6 bg-red-500 mr-2"></div>
+        <p className="text-red-500 font-semibold text-sm">Our products</p>
+      </div>
+      <h2 className="text-2xl font-bold mb-10">Explore Our Products</h2>
 
               {/* Main Container */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-6">
-            {womansProductsData.slice(0, visible).map((product) => (
+            {exploreProductsData.slice(0, visible).map((product) => (
               <div
                 key={product.id}
                 className="relative bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition"
@@ -165,10 +167,10 @@ const WomansProducts = () => {
             ))}
           </div>
 
-          {visible < womansProductsData.length && (
+          {visible < exploreProductsData.length && (
             <div className="text-center mt-6">
               <button
-                onClick={() => setVisible(womansProductsData.length)}
+                onClick={() => setVisible(exploreProductsData.length)}
                 className="bg-red-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-red-600 transition"
               >
                 View All Products
@@ -176,9 +178,9 @@ const WomansProducts = () => {
             </div>
           )}
         </div>
-      </Link>
+    
     </>
   );
 };
 
-export default WomansProducts;
+export default ExploreProducts;
