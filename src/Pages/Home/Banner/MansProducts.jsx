@@ -19,7 +19,7 @@ const mensProductsData = [
     oldPrice: 1500, 
     discount: 20, 
     rating: 4.4, 
-    img: '../../../../public/mensImg/img1.jpg' 
+    img: '../../../../public/bannerProductsImg/mensImg/img1.jpg' 
   },
   { 
     id: 3, 
@@ -28,7 +28,7 @@ const mensProductsData = [
     oldPrice: 2300, 
     discount: 22, 
     rating: 4.6, 
-    img: '../../../../public/mensImg/img3.jpg' 
+    img: '../../../../public/bannerProductsImg/mensImg/img2.jpg'  
   },
   { 
     id: 4, 
@@ -37,7 +37,7 @@ const mensProductsData = [
     oldPrice: 5000, 
     discount: 16, 
     rating: 4.8, 
-    img: '../../../../public/mensImg/img4.jpg' 
+    img: '../../../../public/bannerProductsImg/mensImg/img3.jpg' 
   },
   { 
     id: 5, 
@@ -46,7 +46,7 @@ const mensProductsData = [
     oldPrice: 3100, 
     discount: 19, 
     rating: 4.5, 
-    img: '../../../../public/mensImg/img5.jpg' 
+    img: '../../../../public/bannerProductsImg/mensImg/img4.jpg'  
   },
   { 
     id: 6, 
@@ -55,7 +55,7 @@ const mensProductsData = [
     oldPrice: 1100, 
     discount: 18, 
     rating: 4.3, 
-    img: '../../../../public/mensImg/img6.jpg' 
+    img: '../../../../public/bannerProductsImg/mensImg/img5.jpg' 
   },
   { 
     id: 7, 
@@ -64,7 +64,7 @@ const mensProductsData = [
     oldPrice: 1900, 
     discount: 21, 
     rating: 4.4, 
-    img: '../../../../public/mensImg/img7.jpg' 
+    img: '../../../../public/bannerProductsImg/mensImg/img6.jpg'  
   },
   { 
     id: 8, 
@@ -73,7 +73,7 @@ const mensProductsData = [
     oldPrice: 2500, 
     discount: 20, 
     rating: 4.2, 
-    img: '../../../../public/mensImg/img8.jpg' 
+    img: '../../../../public/bannerProductsImg/mensImg/img7.jpg'  
   },
   { 
     id: 9, 
@@ -82,7 +82,7 @@ const mensProductsData = [
     oldPrice: 3600, 
     discount: 17, 
     rating: 4.6, 
-    img: '' 
+    img: '../../../../public/bannerProductsImg/mensImg/img8.jpg'  
   },
   { 
     id: 10, 
@@ -91,7 +91,7 @@ const mensProductsData = [
     oldPrice: 1000, 
     discount: 20, 
     rating: 4.1, 
-    img: '../../../../public/mensImg/img9.jpg' 
+    img: '../../../../public/bannerProductsImg/mensImg/img9.jpg'  
   }
 ];
 
@@ -103,6 +103,12 @@ const MansProducts=()=> {
     <>
     <Link to="/men-s-fashion">
     <div className="p-6">
+
+      {/* Title */}
+      <h2 className="text-3xl font-semibold italic text-center py-5 text-cyan-800">Men's Fashion</h2>
+      <div className=" border-b-4 border-b-[#c61abd] rounded-3xl w-2/4 mx-auto mb-15 pb-2"></div>
+
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         {
         mensProductsData.slice(0, visible).map((product) => (

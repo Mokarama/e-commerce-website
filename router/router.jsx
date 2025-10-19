@@ -7,6 +7,11 @@ import WomansProducts from "../src/Pages/Home/Banner/WomansProducts";
 import MansProducts from "../src/Pages/Home/Banner/MansProducts";
 import ElectronicsProducts from "../src/Pages/Home/Banner/ElectronicsProducts";
 import MedicinesProducts from "../src/Pages/Home/Banner/MedicinesProducts";
+import HomeLifestyleProducts from "../src/Pages/Home/Banner/HomeLifestyleProducts";
+import SportsOutdoorProducts from "../src/Pages/Home/Banner/SportsOutdoorProducts";
+import BabyToysProducts from "../src/Pages/Home/Banner/BabyToysProducts";
+import GroceriesPetsProducts from "../src/Pages/Home/Banner/GroceriesPetsProducts";
+import HealthBeautyProducts from "../src/Pages/Home/Banner/HealthBeautyProducts";
 
 
 const router=createBrowserRouter([
@@ -30,10 +35,34 @@ const router=createBrowserRouter([
           path:"/electronics",
           Component:ElectronicsProducts,
         },
+         {
+          path:"/home-lifestyle",
+          Component:HomeLifestyleProducts,
+        }
+        ,
         {
           path:"/medicine",
-          Component:MedicinesProducts
+          Component:MedicinesProducts,
         },
+       {
+          path:"/sports-outdoor",
+          Component:SportsOutdoorProducts,
+        },
+        {
+          path:"/baby-s-toys",
+          Component:BabyToysProducts,
+        },
+        {
+          path:"/groceries-pets",
+          Component:GroceriesPetsProducts,
+        },
+        {
+          path:"/health-beauty",
+          Component:HealthBeautyProducts,
+        },
+        
+
+
 
     
 

@@ -2,24 +2,24 @@ import { useState } from 'react';
 import { FaHeart, FaEye, FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const electronicsProductsData = [
+const healthBeautyProductsData = [
   { 
     id: 1, 
-    title: 'Laptop',
+    title: 'Wireless Headphones',
     price: 3500, 
     oldPrice: 4500, 
     discount: 22, 
     rating: 4.7, 
-    img: '../../../../public/bannerProductsImg/electronicsImg/laptop1.jpg' 
+    img: '../../../../public/electronicsImg/img1.jpg' 
   },
   { 
     id: 2, 
-    title: 'Keyboard', 
+    title: 'Smart Watch', 
     price: 2500, 
     oldPrice: 3100, 
     discount: 19, 
     rating: 4.5, 
-    img: '../../../../public/bannerProductsImg/electronicsImg/keyboard1.jpg' 
+    img: '../../../../public/electronicsImg/img2.jpg' 
   },
   { 
     id: 3, 
@@ -28,16 +28,16 @@ const electronicsProductsData = [
     oldPrice: 2300, 
     discount: 22, 
     rating: 4.6, 
-    img: '../../../../public/bannerProductsImg/electronicsImg/headphn1.jpg' 
+    img: '../../../../public/electronicsImg/img3.jpg' 
   },
   { 
     id: 4, 
-    title: 'refrigerator', 
+    title: 'Power Bank', 
     price: 1200, 
     oldPrice: 1500, 
     discount: 20, 
     rating: 4.4, 
-    img: '../../../../public/bannerProductsImg/electronicsImg/refrigerator.jpg' 
+    img: '../../../../public/electronicsImg/img4.jpg' 
   },
   { 
     id: 5, 
@@ -46,7 +46,7 @@ const electronicsProductsData = [
     oldPrice: 1000, 
     discount: 20, 
     rating: 4.1, 
-    img: '../../../../public/bannerProductsImg/electronicsImg/mouse1.jpg' 
+    img: '../../../../public/electronicsImg/img5.jpg' 
   },
   { 
     id: 6, 
@@ -55,25 +55,25 @@ const electronicsProductsData = [
     oldPrice: 1900, 
     discount: 21, 
     rating: 4.4, 
-    img: '../../../../public/bannerProductsImg/electronicsImg/keyboard1.jpg' 
+    img: '../../../../public/electronicsImg/img6.jpg' 
   },
   { 
     id: 7, 
-    title: 'Microwave Oven', 
+    title: 'USB Flash Drive', 
     price: 900, 
     oldPrice: 1100, 
     discount: 18, 
     rating: 4.3, 
-    img: '../../../../public/bannerProductsImg/electronicsImg/oven1.jpg' 
+    img: '../../../../public/electronicsImg/img7.jpg' 
   },
   { 
     id: 8, 
-    title: 'Washing Machine', 
+    title: 'LED Monitor', 
     price: 8500, 
     oldPrice: 10000, 
     discount: 15, 
     rating: 4.7, 
-    img: '../../../../public/bannerProductsImg/electronicsImg/washingMachin.jpg' 
+    img: '../../../../public/electronicsImg/img8.jpg' 
   },
   { 
     id: 9, 
@@ -82,7 +82,7 @@ const electronicsProductsData = [
     oldPrice: 2600, 
     discount: 16, 
     rating: 4.5, 
-    img: '../../../../public/bannerProductsImg/electronicsImg/laptop1.jpg' 
+    img: '../../../../public/electronicsImg/img9.jpg' 
   },
   { 
     id: 10, 
@@ -91,21 +91,26 @@ const electronicsProductsData = [
     oldPrice: 2200, 
     discount: 18, 
     rating: 4.4, 
-    img: '../../../../public/bannerProductsImg/electronicsImg/microphone.jpg' 
+    img: '../../../../public/electronicsImg/img10.jpg' 
   }
 ];
 
 
-const ElectronicsProducts = () => {
+const HealthBeautyProducts = () => {
   const [visible, setVisible] = useState(5);
 
   return (
     <>
       <Link to="/electronics">
         <div className="p-6">
-          
+
+          {/* Title */}
+      <h2 className="text-3xl font-semibold italic text-center py-5 text-cyan-800">Health & Beauty Products</h2>
+      <div className=" border-b-4 border-b-[#c61abd] rounded-3xl w-2/4 mx-auto mb-15 pb-2"></div>
+
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {electronicsProductsData.slice(0, visible).map((product) => (
+            {healthBeautyProductsData.slice(0, visible).map((product) => (
               <div key={product.id} className="relative bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
                 <span className="absolute top-3 left-4 bg-red-500 text-white text-sm font-semibold px-2 py-1 rounded">
                   -{product.discount}%
@@ -142,10 +147,10 @@ const ElectronicsProducts = () => {
             ))}
           </div>
 
-          {visible < electronicsProductsData.length && (
+          {visible < healthBeautyProductsData.length && (
             <div className="text-center mt-6">
               <button
-                onClick={() => setVisible(electronicsProductsData.length)}
+                onClick={() => setVisible(healthBeautyProductsData.length)}
                 className="bg-red-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-red-600 transition"
               >
                 View All Products
@@ -158,4 +163,4 @@ const ElectronicsProducts = () => {
   );
 };
 
-export default ElectronicsProducts;
+export default HealthBeautyProducts;

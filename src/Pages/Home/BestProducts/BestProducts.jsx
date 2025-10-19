@@ -9,8 +9,6 @@ import {
   FaHeart,
   FaStar,
   FaShoppingCart,
-  FaArrowLeft,
-  FaArrowRight,
   FaEye,
 } from "react-icons/fa";
 
@@ -22,27 +20,27 @@ const productsData = [
     oldPrice: 120,
     newPrice: 85,
     discount: "30% OFF",
-    image: "../../../../public/bannerProductsImg/electronicsImg/headphn1.jpg",
+    image: "https://picsum.photos/id/1011/400/300",
     rating: 4.5,
     reviews: 145,
   },
   {
     id: 2,
-    title: "Laptop",
+    title: "Smart Watch",
     oldPrice: 200,
     newPrice: 150,
     discount: "25% OFF",
-    image: "../../../../public/bannerProductsImg/electronicsImg/laptop1.jpg",
+    image: "https://picsum.photos/id/1012/400/300",
     rating: 4.2,
     reviews: 189,
   },
   {
     id: 3,
-    title: "Shirt",
+    title: "Bluetooth Speaker",
     oldPrice: 90,
     newPrice: 60,
     discount: "33% OFF",
-    image: "../../../../public/bannerProductsImg/mensImg/img5.jpg",
+    image: "https://picsum.photos/id/1013/400/300",
     rating: 4.6,
     reviews: 215,
   },
@@ -52,7 +50,7 @@ const productsData = [
     oldPrice: 70,
     newPrice: 45,
     discount: "35% OFF",
-    image: "../../../../public/bannerProductsImg/electronicsImg/mouse1.jpg",
+    image: "https://picsum.photos/id/1015/400/300",
     rating: 4.4,
     reviews: 173,
   },
@@ -62,7 +60,7 @@ const productsData = [
     oldPrice: 150,
     newPrice: 110,
     discount: "27% OFF",
-    image: "../../../../public/bannerProductsImg/electronicsImg/keyboard1.jpg",
+    image: "https://picsum.photos/id/1016/400/300",
     rating: 4.8,
     reviews: 290,
   },
@@ -72,7 +70,7 @@ const productsData = [
     oldPrice: 250,
     newPrice: 190,
     discount: "24% OFF",
-    image: "../../../../public/bannerProductsImg/womansImg/img6.jpg",
+    image: "https://picsum.photos/id/1018/400/300",
     rating: 4.5,
     reviews: 320,
   },
@@ -82,7 +80,7 @@ const productsData = [
     oldPrice: 40,
     newPrice: 28,
     discount: "30% OFF",
-    image: "../../../../public/bannerProductsImg/womansImg/img2.jpg",
+    image: "https://picsum.photos/id/1020/400/300",
     rating: 4.1,
     reviews: 98,
   },
@@ -92,7 +90,7 @@ const productsData = [
     oldPrice: 600,
     newPrice: 480,
     discount: "20% OFF",
-    image: "../../../../public/bannerProductsImg/electronicsImg/washingMachin.jpg",
+    image: "https://picsum.photos/id/1021/400/300",
     rating: 4.7,
     reviews: 156,
   },
@@ -102,7 +100,7 @@ const productsData = [
     oldPrice: 80,
     newPrice: 55,
     discount: "31% OFF",
-    image: "../../../../public/bannerProductsImg/mensImg/img7.jpg",
+    image: "https://picsum.photos/id/1022/400/300",
     rating: 4.3,
     reviews: 124,
   },
@@ -112,31 +110,25 @@ const productsData = [
     oldPrice: 60,
     newPrice: 40,
     discount: "33% OFF",
-    image: "../../../../public/bannerProductsImg/electronicsImg/oven1.jpg",
+    image: "https://picsum.photos/id/1024/400/300",
     rating: 4.5,
     reviews: 167,
   },
 ];
 
-const FlashSales = () => {
+const BestProducts = () => {
   const scrollRef = useRef(null);
   const [showAll, setShowAll] = useState(false);
 
   const visibleProducts = showAll ? productsData : productsData.slice(0, 8);
 
-  const scrollLeft = () => {
-    scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
-  };
-  const scrollRight = () => {
-    scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
-  };
 
   return (
     <section className="py-10 px-5 md:px-10 bg-base-100 relative">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-800">
-          <span className="text-red-500">Today’s</span> Flash Sales
+          <span className="text-red-500">Today’s</span> Best Products
         </h2>
 
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-3 md:mt-0">
@@ -148,23 +140,19 @@ const FlashSales = () => {
             </div>
           </div>
 
-          {/* Arrows for scroll */}
-          {!showAll && (
-            <div className="flex gap-4">
-              <button
-                onClick={scrollLeft}
-                className="p-2 bg-gray-200 hover:bg-gray-300 rounded-full"
-              >
-                <FaArrowLeft />
-              </button>
-              <button
-                onClick={scrollRight}
-                className="p-2 bg-gray-200 hover:bg-gray-300 rounded-full"
-              >
-                <FaArrowRight />
-              </button>
-            </div>
-          )}
+          {/* View All Button */}
+      <div className="flex justify-end mt-2">
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className={`btn px-8 rounded-full ${
+            showAll
+              ? "bg-gray-300 text-gray-800 hover:bg-gray-400"
+              : "bg-red-500 text-white hover:bg-red-600"
+          }`}
+        >
+          {showAll ? "Show Less" : "View All Products"}
+        </button>
+      </div>
         </div>
       </div>
 
@@ -238,21 +226,9 @@ const FlashSales = () => {
         ))}
       </div>
 
-      {/* View All Button */}
-      <div className="flex justify-center mt-10">
-        <button
-          onClick={() => setShowAll(!showAll)}
-          className={`btn px-8 rounded-full ${
-            showAll
-              ? "bg-gray-300 text-gray-800 hover:bg-gray-400"
-              : "bg-red-500 text-white hover:bg-red-600"
-          }`}
-        >
-          {showAll ? "Show Less" : "View All Products"}
-        </button>
-      </div>
+     
     </section>
   );
 };
 
-export default FlashSales;
+export default BestProducts;

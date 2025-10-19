@@ -102,6 +102,11 @@ const MedicinesProducts = () => {
     <>
       <Link to="/medicine">
         <div className="p-6">
+
+          {/* Title */}
+      <h2 className="text-3xl font-semibold italic text-center py-5 text-cyan-800">Medicine's Products</h2>
+      <div className=" border-b-4 border-b-[#c61abd] rounded-3xl w-2/4 mx-auto mb-15 pb-2"></div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             {medicinesProductsData.slice(0, visible).map((product) => (
               <div key={product.id} className="relative bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
